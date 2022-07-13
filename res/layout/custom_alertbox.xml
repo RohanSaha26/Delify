@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/alertTitle"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/alfa_slab_one"
+        android:gravity="center"
+        android:text="Title"
+        android:textColor="@color/mydeepblue"
+        android:background="@color/myskyblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <TextView
+        android:id="@+id/alertDescription"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Description"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/alertBtn1"
+        android:layout_width="205dp"
+        android:layout_height="57dp"
+        android:background="@drawable/roundedge"
+        android:fontFamily="@font/days_one"
+        android:gravity="center"
+        android:text="Button 1"
+        android:textAllCaps="true"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121"
+        android:textColor="@color/mydeepblue"/>
+
+    <TextView
+        android:id="@+id/alertBtn2"
+        android:layout_width="205dp"
+        android:layout_height="57dp"
+        android:background="@drawable/roundedge"
+        android:fontFamily="@font/days_one"
+        android:gravity="center"
+        android:text="Button 2"
+        android:textAllCaps="true"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121"
+        android:textColor="@color/mydeepblue"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:background="@color/myblue"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Update task"
+            android:textSize="24dp"
+            android:gravity="center"
+            android:textColor="@color/mydeepblue"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_margin="10dp"
+            android:id="@+id/edit_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="120dp"
+            android:hint="Task"
+            android:padding="10dp"
+            android:textSize="18dp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/mydeepblue"
+            />
+
+        <ImageView
+            android:id="@+id/edit_task_go"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/go" />
+    </LinearLayout>
+
+</layout>

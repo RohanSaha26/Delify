@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.ProfileInfo">
+
+
+        <ImageView
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/roundedge1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/bottomnav"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="@drawable/roundedge2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/profileinfotitle"
+            android:layout_width="260dp"
+            android:layout_height="44dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toEndOf="@+id/topbar"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.593"
+            app:srcCompat="@drawable/profileinfotitle" />
+
+
+        <ImageView
+            android:id="@+id/chats"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:background="@drawable/chats"
+            android:contentDescription="CHATS"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="23dp"
+            android:layout_height="25dp"
+            android:background="@drawable/profile"
+            android:contentDescription="PROFILE"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.373"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <ImageView
+            android:id="@+id/task"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:background="@drawable/todoicon"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.643"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+
+        <ImageView
+            android:id="@+id/qricon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/qricon"
+            android:contentDescription="FILES"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.906"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toStartOf="@+id/profileinfotitle"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="@+id/topbar"
+            app:layout_constraintVertical_bias="0.581"
+            app:srcCompat="@drawable/back" />
+
+
+        <ImageView
+            android:id="@+id/sendgmailbtn"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileinfo_linearlayout"
+            app:layout_constraintVertical_bias="0.586"
+            app:srcCompat="@drawable/sendgmailbtn" />
+
+        <ImageView
+            android:id="@+id/messagebtn"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="32dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.908"
+            app:layout_constraintStart_toEndOf="@+id/sendgmailbtn"
+            app:layout_constraintTop_toBottomOf="@+id/profileinfo_linearlayout"
+            app:layout_constraintVertical_bias="0.587"
+            app:srcCompat="@drawable/messagebtn" />
+
+        <ImageView
+            android:id="@+id/commontasks"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/messagebtn"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/sendgmailbtn"
+            app:layout_constraintTop_toBottomOf="@+id/messagebtn"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/commontaskbtn" />
+
+        <LinearLayout
+            android:id="@+id/profileinfo_linearlayout"
+            android:layout_width="291dp"
+            android:layout_height="260dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintVertical_bias="0.166">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profiledp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:shapeAppearanceOverlay="@style/Circular"/>
+
+            <TextView
+                android:id="@+id/user_Name"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="Name Title"
+                android:textColor="@color/mydeepblue"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/user_gmail"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:textColor="@color/mydeepblue"
+                android:textStyle="bold"
+                android:text="example@gmail.com"
+                android:textAlignment="center"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

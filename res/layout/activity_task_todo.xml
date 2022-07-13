@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.TaskToDo">
+
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="0dp"
+            android:id="@+id/shimmer"
+            android:layout_height="0dp"
+            android:foregroundGravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_userlist" />
+                <include layout="@layout/shimmer_userlist" />
+                <include layout="@layout/shimmer_userlist" />
+                <include layout="@layout/shimmer_userlist" />
+                <include layout="@layout/shimmer_userlist" />
+                <include layout="@layout/shimmer_userlist" />
+                <include layout="@layout/shimmer_userlist" />
+                <include layout="@layout/shimmer_userlist" />
+                <include layout="@layout/shimmer_userlist" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/task_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            tools:itemCount="10"
+            tools:listitem="@layout/task_collab_card_design" />
+
+        <ImageView
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/roundedge1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/bottomnav"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="@drawable/roundedge2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toEndOf="@+id/topbar"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6"
+            app:srcCompat="@drawable/taskstitle" />
+
+        <ImageView
+            android:id="@+id/mytasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/task_recyclerview"
+            app:layout_constraintEnd_toEndOf="@+id/topbar"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.969"
+            app:srcCompat="@drawable/mytasksbtn" />
+
+        <ImageView
+            android:id="@+id/chats"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:background="@drawable/chats"
+            android:contentDescription="CHATS"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="23dp"
+            android:layout_height="25dp"
+            android:background="@drawable/profile"
+            android:contentDescription="PROFILE"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.373"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <ImageView
+            android:id="@+id/task"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:background="@drawable/todoiconselect"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.643"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+
+        <ImageView
+            android:id="@+id/qricon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/qricon"
+            android:contentDescription="FILES"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.906"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/notaskanim"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintVertical_bias="0.469"
+            app:lottie_autoPlay="true"
+            android:visibility="visible"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/notasks" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

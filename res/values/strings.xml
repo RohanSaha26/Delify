@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Delify</string>
+    <string name="project_admin">Saha Project</string>
+    <string name="download_link">https://drive.google.com/file/d/1315lQHetvk6xGfwqXGda0q9oUewDcShP/view?usp=sharing</string>
+    <string name="infolink">https://docs.google.com/document/d/1GKtygtQwyDqbNJYfifvN7r6HTjxKrbN-mcKunmbS0MA/edit?usp=sharing</string>
+    <string name="drive_link_start">https://drive.google.com/file/d/</string>
+    <string name="drive_link_end">/view?usp=drivesdk</string>
+</resources>

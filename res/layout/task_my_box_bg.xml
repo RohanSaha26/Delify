@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:layout_height="150dp"
+        android:layout_width="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackground">
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/floatingbg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/taskbody"
+                android:layout_width="280dp"
+                android:layout_height="80dp"
+                android:maxWidth="280dp"
+                android:autoLink="all"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textSize="20dp"
+                android:text="Task Body"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.198"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.74" />
+
+            <TextView
+                android:id="@+id/taskupdatedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="12dp"
+                android:text="01-01-21"
+                android:textColor="@color/mygreen"
+                android:textSize="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintHorizontal_bias="0.219"
+                app:layout_constraintStart_toEndOf="@+id/taskbody"
+                app:layout_constraintTop_toBottomOf="@+id/completeindicatororedittask"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/taskcreatedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="01-01-21"
+                android:textColor="@color/myblue"
+                app:layout_constraintBottom_toTopOf="@+id/taskbody"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.073"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/completetask"
+                android:layout_width="79dp"
+                android:layout_height="29dp"
+                app:layout_constraintBottom_toTopOf="@+id/taskbody"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.707"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.666"
+                app:srcCompat="@drawable/completebtn" />
+
+            <ImageView
+                android:id="@+id/deletetask"
+                android:layout_width="79dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="7dp"
+                app:layout_constraintBottom_toTopOf="@+id/taskbody"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/completetask"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/deletebtn" />
+
+            <ImageView
+                android:id="@+id/completeindicatororedittask"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toEndOf="@+id/taskbody"
+                app:layout_constraintTop_toBottomOf="@+id/deletetask"
+                app:layout_constraintVertical_bias="0.837" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

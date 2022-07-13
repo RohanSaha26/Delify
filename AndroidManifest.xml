@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sahaprojects.drivechat">
+
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/mainappicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/mainappiconround"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Drivechat">
+        <activity android:name=".View.MyTasks"></activity>
+        <activity android:name=".View.InboxTask" />
+        <activity android:name=".View.TaskToDo" />
+        <activity android:name=".View.OCR" />
+        <activity android:name=".View.Capture" />
+        <activity
+            android:name=".View.InboxChat"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".Extras.Test" />
+        <activity
+            android:name=".Animations.FirstTimeSplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Animations.OpeningSplashScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.ProfileInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.StartAChat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.Welcome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.QrCode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".View.Chats"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Extras.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="ocr" />
+    </application>
+
+</manifest>

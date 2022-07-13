@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.StartAChat">
+
+
+        <ImageView
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/roundedge1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/startachattitle"
+            android:layout_width="206dp"
+            android:layout_height="34dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toEndOf="@+id/topbar"
+            app:layout_constraintHorizontal_bias="0.256"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.583"
+            app:srcCompat="@drawable/startachattitle" />
+
+        <EditText
+            android:id="@+id/gmailinputspace"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="144dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="example@gmail.com"
+            android:padding="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.442"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar" />
+
+        <ImageView
+            android:id="@+id/enteregmailtext"
+            android:layout_width="140dp"
+            android:layout_height="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/gmailinputspace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.103"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintVertical_bias="0.903"
+            app:srcCompat="@drawable/entergmailtext" />
+
+        <ImageView
+            android:id="@+id/gobtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gmailinputspace"
+            app:layout_constraintVertical_bias="0.034"
+            app:srcCompat="@drawable/go" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toStartOf="@+id/startachattitle"
+            app:layout_constraintHorizontal_bias="0.888"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.58"
+            app:srcCompat="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/inviteviagmail"
+            android:layout_width="209dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gobtn"
+            app:layout_constraintVertical_bias="0.043"
+            android:visibility="gone"
+            app:srcCompat="@drawable/inviteviagmail" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progressbar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.522"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.787"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/searching"
+            android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

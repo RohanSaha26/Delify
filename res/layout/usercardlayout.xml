@@ -1,0 +1,100 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/roundedge"
+        >
+
+        
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/carddp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/profiledp"
+            android:layout_gravity="center"
+            app:shapeAppearanceOverlay="@style/Circular"
+            />
+
+        <TextView
+            android:id="@+id/cardname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/armata"
+
+            android:text="Name"
+            android:paddingTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/cardgmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/armata"
+            android:text="example@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/carddeletechats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone"
+            android:background="@drawable/carddeletechatsbtn"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/carddeletefromthislist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/carddeletefromlistbtn"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/cardcollabtasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/cardcollabtasksbtn"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/cardviewprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/cardviewprofilebtn"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/cardmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/cardmessagebtn"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/cardclose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/cardclosebtn"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</layout>

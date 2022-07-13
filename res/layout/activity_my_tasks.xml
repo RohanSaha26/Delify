@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.MyTasks">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="0dp"
+            android:id="@+id/shimmer"
+            android:layout_height="0dp"
+            android:foregroundGravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintBottom_toTopOf="@+id/inboxtaskspace"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_mytask" />
+                <include layout="@layout/shimmer_mytask" />
+                <include layout="@layout/shimmer_mytask" />
+                <include layout="@layout/shimmer_mytask" />
+                <include layout="@layout/shimmer_mytask" />
+                <include layout="@layout/shimmer_mytask" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mytaskrecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:listitem="@layout/task_my_box_bg"
+            app:layout_constraintBottom_toTopOf="@+id/inboxtaskspace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+
+            />
+        <ImageView
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/roundedge1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toStartOf="@+id/taskreceiver_name"
+            app:layout_constraintHorizontal_bias="0.41"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.509"
+            app:srcCompat="@drawable/back" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/mytask_photo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.929"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.473"
+            app:shapeAppearanceOverlay="@style/Circular"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/taskreceiver_name"
+            android:layout_width="161dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.324"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mytaskstitle" />
+
+        <EditText
+            android:id="@+id/inboxtaskspace"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="144dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Add a task.."
+            android:maxHeight="120dp"
+            android:minHeight="40dp"
+            android:padding="15dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.163"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/addtask"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:paddingStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/inboxtaskspace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.407"
+            app:layout_constraintStart_toEndOf="@+id/inboxtaskspace"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintVertical_bias="0.989"
+            app:srcCompat="@drawable/addtaskbtn" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/notaskanim"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toTopOf="@+id/inboxtaskspace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintVertical_bias="0.469"
+            app:lottie_autoPlay="true"
+            android:visibility="gone"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/notasks2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

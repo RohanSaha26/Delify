@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.QrCode">
+
+
+        <ImageView
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/roundedge1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/bottomnav"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="@drawable/roundedge2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/myqrtitle"
+            android:layout_width="224dp"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toEndOf="@+id/topbar"
+            app:layout_constraintHorizontal_bias="0.272"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.58"
+            app:srcCompat="@drawable/myqrtitle" />
+
+        <ImageView
+            android:id="@+id/chats"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:background="@drawable/chats"
+            android:contentDescription="CHATS"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="23dp"
+            android:layout_height="25dp"
+            android:background="@drawable/profile"
+            android:contentDescription="PROFILE"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.373"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <ImageView
+            android:id="@+id/task"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:background="@drawable/todoicon"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.643"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+
+        <ImageView
+            android:id="@+id/qricon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/qriconselect"
+            android:contentDescription="FILES"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.906"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <EditText
+            android:id="@+id/qrinput"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Enter something for create QR"
+            android:padding="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.063"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <ImageView
+            android:id="@+id/qrcodeimage"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qrinput"
+            app:layout_constraintVertical_bias="0.091"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/qrcreatebtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/qrinput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.671"
+            app:layout_constraintStart_toEndOf="@+id/qrinput"
+            app:layout_constraintTop_toTopOf="@+id/qrinput"
+            app:srcCompat="@drawable/go" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/myblue"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qrshare"
+            app:layout_constraintVertical_bias="0.042" />
+
+        <ImageView
+            android:id="@+id/qrscan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintVertical_bias="0.939"
+
+            app:srcCompat="@drawable/qrscanbtn" />
+
+        <ImageView
+            android:id="@+id/qrshare"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qrcodeimage"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/share" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

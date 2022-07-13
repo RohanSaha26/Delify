@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:layout_height="140dp"
+        android:layout_width="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackground">
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/floatingbg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/taskcreaterdp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/profiledp"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toStartOf="@id/completetask"
+                app:layout_constraintHorizontal_bias="0.023"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.06"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/completebysender"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="43dp"
+                android:background="@drawable/profiledp"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toEndOf="@+id/taskbody"
+                app:layout_constraintTop_toTopOf="@+id/taskbody"
+                app:layout_constraintVertical_bias="1.0"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/completebyreceiver"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/profiledp"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/completebysender"
+                app:layout_constraintTop_toTopOf="@+id/taskbody"
+                app:layout_constraintVertical_bias="1.0"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <TextView
+                android:id="@+id/completebytext"
+                android:layout_width="50dp"
+                android:layout_height="10dp"
+                android:gravity="center"
+                android:text="Complete by"
+                android:textColor="@color/black"
+                android:textSize="7dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.16"
+                app:layout_constraintStart_toEndOf="@+id/taskbody"
+                app:layout_constraintTop_toBottomOf="@+id/deletetask"
+                app:layout_constraintVertical_bias="0.746" />
+
+            <TextView
+                android:id="@+id/taskbody"
+                android:layout_width="280dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="12dp"
+                android:autoLink="all"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Task Body"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textIsSelectable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.236"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/taskcreaterdp"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/taskcreatedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:paddingLeft="5dp"
+                android:text="01-01-21"
+                android:textColor="@color/myblue"
+                android:textSize="11dp"
+                app:layout_constraintBottom_toTopOf="@+id/taskbody"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toEndOf="@+id/taskcreaterdp"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.75" />
+
+            <ImageView
+                android:id="@+id/completetask"
+                android:layout_width="79dp"
+                android:layout_height="29dp"
+                app:layout_constraintBottom_toTopOf="@+id/taskbody"
+                app:layout_constraintEnd_toStartOf="@+id/deletetask"
+                app:layout_constraintHorizontal_bias="0.922"
+                app:layout_constraintStart_toEndOf="@+id/taskcreatedate"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.571"
+                app:srcCompat="@drawable/completebtn" />
+
+            <ImageView
+                android:id="@+id/edit_task"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="39dp"
+                android:background="@drawable/editablebtn"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toEndOf="@+id/taskbody"
+                app:layout_constraintTop_toBottomOf="@+id/deletetask"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/deletetask"
+                android:layout_width="79dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="7dp"
+                app:layout_constraintBottom_toTopOf="@+id/taskbody"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.931"
+                app:layout_constraintStart_toEndOf="@+id/taskbody"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.444"
+                app:srcCompat="@drawable/deletebtn" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

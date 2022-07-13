@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Animations.OpeningSplashScreen">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="102dp"
+            android:layout_height="92dp"
+            android:src="@drawable/mainappiconround"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.323" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="106dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/armata"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/mydeepblue"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:layout_width="128dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="a Drivechat product"
+            android:textSize="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/sqloading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="104dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/armata"
+            android:text="@string/project_admin"
+            android:textColor="@color/mydeepblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.992" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/sqloading"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.926"
+            app:lottie_rawRes="@raw/loading"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

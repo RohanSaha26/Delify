@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.Profile">
+
+
+        <LinearLayout
+            android:id="@+id/profile_linearlayout"
+            android:layout_width="291dp"
+            android:layout_height="260dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintVertical_bias="0.094">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profiledp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:shapeAppearanceOverlay="@style/Circular" />
+
+            <TextView
+                android:id="@+id/user_Name"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="Name Title"
+                android:textColor="@color/mydeepblue"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/user_gmail"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:textColor="@color/mydeepblue"
+                android:textStyle="bold"
+                android:text="example@gmail.com"
+                android:textAlignment="center"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/roundedge1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/bottomnav"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="@drawable/roundedge2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/myprofiletitle"
+            android:layout_width="161dp"
+            android:layout_height="42dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toEndOf="@+id/topbar"
+            app:layout_constraintHorizontal_bias="0.168"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52"
+            app:srcCompat="@drawable/myprofiletitle" />
+
+        <ImageView
+            android:id="@+id/chats"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:background="@drawable/chats"
+            android:contentDescription="CHATS"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="23dp"
+            android:layout_height="25dp"
+            android:background="@drawable/profileselect"
+            android:contentDescription="PROFILE"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.373"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+        <ImageView
+            android:id="@+id/task"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:background="@drawable/todoicon"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.643"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+
+        <ImageView
+            android:id="@+id/qricon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/qricon"
+            android:contentDescription="FILES"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="@+id/bottomnav"
+            app:layout_constraintHorizontal_bias="0.906"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bottomnav"
+            app:layout_constraintVertical_bias="0.555" />
+
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logout"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_linearlayout"
+            app:layout_constraintVertical_bias="0.916" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

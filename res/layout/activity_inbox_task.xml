@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.InboxTask">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="0dp"
+            android:id="@+id/shimmer"
+            android:layout_height="0dp"
+            android:foregroundGravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintBottom_toTopOf="@+id/inboxtaskspace"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_mytask" />
+                <include layout="@layout/shimmer_mytask" />
+                <include layout="@layout/shimmer_mytask" />
+                <include layout="@layout/shimmer_mytask" />
+                <include layout="@layout/shimmer_mytask" />
+                <include layout="@layout/shimmer_mytask" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/inboxtaskrecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:listitem="@layout/task_collab_box_bg"
+            app:layout_constraintBottom_toTopOf="@+id/inboxtaskspace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+
+            />
+
+        <ImageView
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/roundedge1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/gotochats"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toStartOf="@+id/taskreceiver_photo"
+            app:layout_constraintHorizontal_bias="0.416"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.583"
+            app:srcCompat="@drawable/chats" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/taskreceiver_photo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.244"
+            app:layout_constraintStart_toStartOf="@+id/topbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.578"
+            app:shapeAppearanceOverlay="@style/Circular"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/task_inbox_online_indicator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/chat_online_indicator"
+            app:layout_constraintBottom_toBottomOf="@+id/taskreceiver_photo"
+            app:layout_constraintEnd_toEndOf="@+id/taskreceiver_photo"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="@+id/taskreceiver_photo"
+            app:layout_constraintTop_toTopOf="@+id/taskreceiver_photo"
+            app:layout_constraintVertical_bias="1.0" />
+        <TextView
+            android:id="@+id/taskreceiver_name"
+            android:layout_width="205dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/days_one"
+            android:text="Name Title"
+            android:textColor="@color/mydeepblue"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.103"
+            app:layout_constraintStart_toEndOf="@+id/taskreceiver_photo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.328" />
+
+        <TextView
+            android:id="@+id/taskreceiver_gmail"
+            android:layout_width="216dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/days_one"
+            android:text="example@gmail.com"
+            android:textColor="@color/mydeepblue"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.118"
+            app:layout_constraintStart_toEndOf="@+id/taskreceiver_photo"
+            app:layout_constraintTop_toBottomOf="@+id/taskreceiver_name"
+            app:layout_constraintVertical_bias="0.437" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/nocollabtasks"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toTopOf="@+id/inboxtaskspace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintVertical_bias="0.479"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/nocollabtasks" />
+        <EditText
+            android:id="@+id/inboxtaskspace"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="144dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Add a task.."
+            android:maxHeight="120dp"
+            android:minHeight="40dp"
+            android:padding="15dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.998" />
+
+        <ImageView
+            android:id="@+id/addtask"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:paddingStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/inboxtaskspace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.407"
+            app:layout_constraintStart_toEndOf="@+id/inboxtaskspace"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:layout_constraintVertical_bias="0.989"
+            app:srcCompat="@drawable/addtaskbtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
