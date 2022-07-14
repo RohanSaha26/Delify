@@ -6,10 +6,11 @@ Delify app can perform various types of task like-
 3. Organize a to-do or task list for himself/herself.(My Tasks)
 4. Create a QR code from text and share it anywhere.(My QR)
 5. Scan any QR code and perform as per QR codes.(My QR)
-6. Scan an image and extract text from this image and copy
-
-that.(OCR).<br/>
+6. Scan an image and extract text from this image and copy that.(OCR).<br/>
 
 [Delify Demo](https://user-images.githubusercontent.com/71321553/178896450-c95c5c8f-a3fb-4dc5-adeb-7aee373d2d9e.mp4)
 
-[APK Link](https://drive.google.com/file/d/1315lQHetvk6xGfwqXGda0q9oUewDcShP/view)<br/>
+<br/>You can download this app from here<br/>
+[Click here](https://drive.google.com/file/d/1315lQHetvk6xGfwqXGda0q9oUewDcShP/view)<br/>
+
+
